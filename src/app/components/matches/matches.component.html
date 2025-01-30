@@ -1,0 +1,18 @@
+<app-banner [title]="'Matches'"></app-banner>
+
+<div class="container">
+    <div class="row">
+
+      <div class="col-lg-12 mt-4" >
+        <div class="form-group">  
+          <input type="text" class="form-control" placeholder="Name" name="a" [(ngModel)]="term">
+        </div>
+      </div>
+      <div class="col-lg-12" *ngFor="let m of matches | myFilter:term">
+       
+
+        <app-match [match]="m" (newMatches)="parentDeleteMatch($event)"></app-match>
+
+      </div>
+    </div>
+  </div>

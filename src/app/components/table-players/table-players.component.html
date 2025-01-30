@@ -1,0 +1,52 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 mx-auto text-center">
+          <h1 class="text-white" >Table Players</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+            <div class="widget-next-match">
+              <table class="table custom-table">
+                <thead>
+                  <tr>
+                    <th>id</th>
+                    <th>Player name</th>
+                    <th>Player Post</th>
+                    <th>Player Number</th>
+                    <th>Player Team</th>
+                    <th>Action</th>
+                   
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let p of players"   appColor>
+                    <td>{{p.id}}</td>
+                    <td><strong class="text-white">{{p.name}}</strong></td>
+                    <td><strong class="text-white">{{p.post}}</strong></td>
+                    <td><strong class="text-white">{{p.number}}</strong></td>
+                    <td><strong class="text-white">{{ p.teamId.name}}</strong></td>
+                    <td>
+
+                        <!-- <button (click)="deleteMatch(match.id)" class="btn btn-danger">Delete</button> -->
+                        <!-- <button (click)="navigateTo(t.id)" class="btn btn-info">Edit</button> -->
+                    </td>
+              
+                  </tr>
+             
+               
+                </tbody>
+              </table>
+            </div>
+          </div>
+   
+      </div>
+    </div>
+  </div>
